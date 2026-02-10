@@ -32,6 +32,16 @@ app.get('/health', (req, res) => {
   });
 });
 
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Chitkara Qualifier 1 API',
+    endpoints: {
+      health: '/health',
+      bfhl: '/bfhl'
+    }
+  });
+});
+
 app.post('/bfhl', async (req, res) => {
   try {
     const body = req.body || {};
