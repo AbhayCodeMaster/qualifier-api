@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "builds": [{ "src": "api/index.js", "use": "@vercel/node" }],
+  "routes": [
+    { "src": "/health", "dest": "/api/index.js" },
+    { "src": "/bfhl", "dest": "/api/index.js" }
+  ]
+}
